@@ -40,68 +40,115 @@
     <h1>Example Domain</h1> <!-- Start of h1 element which is short for heading 1. It is the largest heading element -->
     <p>This domain is for use in illustrative examples in documents. You may use this
     domain in literature without prior coordination or asking for permission.</p>
-</div>
-<div> <!-- Headers & Text Types-->
     
-        <h1>My Web Page</h1> <!-- h7 does not exist , h6 is smaller than normal deafult text--> 
-        <h2>Header2</h2>
-        <h3>Header3</h3>
-        <!-- Why do we use paragraph? -->
-        <!-- If we try to write a text and do not use a paragraph block we
-             will not have a nextline and all our text will be side by side.
-             And it makes easy to read the code. to make a new line inside 
-             of the paragraph use <br> -->
-        <p>Welcome to my web page. This is my first web page. I hope you like it.</p>
-        <p>This is a <b>bold</b> paragraph.</p><!-- b is for bold but you can use <strong>"text"</strong> -->
-        <p>This is a <i>italic</i> paragraph.</p><!-- i is for italic but you can use <em>"text"</em> -->
-        <p>This is a <b><i>bold and italic</i></b> paragraph.</p>
-        <p>This is a <small>small</small> paragraph.</p>
-        <p>This is a <big>big</big> paragraph.</p>
-        <p>This is a <mark>mark</mark> paragraph.</p>
-        <hr> <!-- hr is for horizontal line -->
+    <div> <!-- Headers & Text Types-->
+        
+            <h1>My Web Page</h1> <!-- h7 does not exist , h6 is smaller than normal deafult text--> 
+            <h2>Header2</h2>
+            <h3>Header3</h3>
+            <!-- Why do we use paragraph? -->
+            <!-- If we try to write a text and do not use a paragraph block we
+                will not have a nextline and all our text will be side by side.
+                And it makes easy to read the code. to make a new line inside 
+                of the paragraph use <br> -->
+            <p>Welcome to my web page. This is my first web page. I hope you like it.</p>
+            <p>This is a <b>bold</b> paragraph.</p><!-- b is for bold but you can use <strong>"text"</strong> -->
+            <p>This is a <i>italic</i> paragraph.</p><!-- i is for italic but you can use <em>"text"</em> -->
+            <p>This is a <b><i>bold and italic</i></b> paragraph.</p>
+            <p>This is a <small>small</small> paragraph.</p>
+            <p>This is a <big>big</big> paragraph.</p>
+            <p>This is a <mark>mark</mark> paragraph.</p>
+            <hr> <!-- hr is for horizontal line -->
 
-        <p>This is a <u>underlined</u> paragraph.</p><!-- u is for underline but you can use <ins>"text"</ins> -->
-        <p>This is a <sup>superscript</sup> paragraph.</p>
-        <p>This is a <sub>subscript</sub> paragraph.</p>
-        <p>This is a <del>deleted</del> paragraph.</p>
-        <p>This is a <sub>subscript</sub> paragraph.</p>
-</div>
-<div>
-    <ul> <!-- ul is for unordered list -->
-        <li>Item 1</li> <!-- li is for list item -->
-        <li><strong>Item 2</strong></li>
-        <li><em>Item 3</em></li>
-        <li><del>Item 4</del></li>
-        <li><ins>Item 5</ins></li>
+            <p>This is a <u>underlined</u> paragraph.</p><!-- u is for underline but you can use <ins>"text"</ins> -->
+            <p>This is a <sup>superscript</sup> paragraph.</p>
+            <p>This is a <sub>subscript</sub> paragraph.</p>
+            <p>This is a <del>deleted</del> paragraph.</p>
+            <p>This is a <sub>subscript</sub> paragraph.</p>
+    </div>
+    <div>
+        <ul> <!-- ul is for unordered list -->
+            <li>Item 1</li> <!-- li is for list item -->
+            <li><strong>Item 2</strong></li>
+            <li><em>Item 3</em></li>
+            <li><del>Item 4</del></li>
+            <li><ins>Item 5</ins></li>
 
-    </ul>
-    <hr>
+        </ul>
+        <hr>
 
-    <ol > <!-- ol is for ordered list but its in deafult mode it starts with 1-->
-        <li>Item 17</li>
-        <li><strong>Item 24</strong></li>
-        <li><em>Item 03</em></li>
-        <li><del>Item 45</del></li>
-        <li><ins>Item 53</ins></li>
-    </ol>
+        <ol > <!-- ol is for ordered list but its in deafult mode it starts with 1-->
+            <li>Item 17</li>
+            <li><strong>Item 24</strong></li>
+            <li><em>Item 03</em></li>
+            <li><del>Item 45</del></li>
+            <li><ins>Item 53</ins></li>
+        </ol>
 
-    <ol start="10"> <!-- ol is for ordered list but list numbering stats from 10 -->
-        <li>Item 17</li>
-        <li><strong>Item 24</strong></li>
-        <li><em>Item 03</em></li>
-        <li><del>Item 45</del></li>
-        <li><ins>Item 53</ins></li>
-    </ol>
+        <ol start="10"> <!-- ol is for ordered list but list numbering stats from 10 -->
+            <li>Item 17</li>
+            <li><strong>Item 24</strong></li>
+            <li><em>Item 03</em></li>
+            <li><del>Item 45</del></li>
+            <li><ins>Item 53</ins></li>
+        </ol>
 
-    <ol type="i"> <!-- ol is for ordered list but list can have tpes like roman numarıcs or alphabetical symbols -->
-        <li>Item 17</li>
-        <li><strong>Item 24</strong></li>
-        <li><em>Item 03</em></li>
-        <li><del>Item 45</del></li>
-        <li><ins>Item 53</ins></li>
-    </ol>
-</div>
-    
+        <ol type="i"> <!-- ol is for ordered list but list can have tpes like roman numarıcs or alphabetical symbols -->
+            <li>Item 17</li>
+            <li><strong>Item 24</strong></li>
+            <li><em>Item 03</em></li>
+            <li><del>Item 45</del></li>
+            <li><ins>Item 53</ins></li>
+        </ol>
+    </div>
+    <div>
+        <!-- Forms -->
+        <form>
+        Username: <input type="text" placeholder="Username"><br> <!-- after type u can use value but it will make the user first delete the valu after that enter their username so use place holder-->
+        Are you alive? <input type="checkbox" checked><br> <!-- type="checkbox" you can leave like this it will be a checkbox but you can also use checked attribute to make it checked by default -->
+        Under 18? <input type="radio"><br>
+        Over 18? <input type="radio"><br>
+        <p>These two are not linked that why we can select both of them at he same time. </p>
+        <hr>
+        Under 18? <input type="radio" name="age"><br>
+        Over 18? <input type="radio" name="age"><br> <!-- name attribute is used to link the radio buttons together. -->
+        <p>
+            <Label>What are you ?</Label><br>
+            <select>
+                <!-- If you dont use selected default value will be first option-->
+                <option>Option 1</option>
+                <option selected>Option 2</option>
+                <option>Option 3</option>    
+            </select>
+        </p>
+        <!-- <p><input type= "submit"></p> -> This is a default it will write what your language submit is -->
+        <p><input type= "submit" value="Click here!"></p> <!-- This is a custom submit button -->
+    </form>
+    </div>
+    <div>
+        <!-- Tables -->
+        <table>
+            <thead>
+                <th>Colour</th>
+                <th>Stuff</th>
+            </thead>
+            <tbody>
+                <tr> <!-- tr is for table row -->
+                    <td>Green</td> <!-- td is for table data -->
+                    <td>Book</td>
+                    
+                </tr>
+                <tr>
+                    <td>Blue</td>
+                    <td>Sky</td>
+                </tr>
+                <tr>
+                    <td>Red</td>
+                    <td>Apple</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>    
 </div>
 </body>
 </html>
