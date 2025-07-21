@@ -1,3 +1,5 @@
+# Tip Calculator Project
+# This is a simple tip calculator that calculates the total bill with tip and splits it among a
 print("Welcome to the tip calculator!")
 bill = float(input("What was the total bill? $"))
 tip = int(input("What percentage tip would you like to give? 10 12 15 "))

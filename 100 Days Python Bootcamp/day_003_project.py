@@ -1,3 +1,5 @@
+# Choose Your Own Adventure Game
+# This is a simple text-based adventure game where the player makes choices to navigate through a story
 print(r'''
                       ____________________________________________________________________
                      / \-----     ---------  -----------     -------------- ------    ----\

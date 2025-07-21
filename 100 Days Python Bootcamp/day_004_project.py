@@ -1,3 +1,5 @@
+# Simple Rock, Paper, Scissors Game
+# This is a simple game where the user plays against the computer in a game of Rock,
 import random
 
 deuce = '''
