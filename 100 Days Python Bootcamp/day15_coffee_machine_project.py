@@ -35,7 +35,11 @@ resources = {
     "coffee": 100,
     "money": 0.0,
 }
-
+def countdown(message, seconds=5):
+    for n in range(seconds, 0, -1):
+        time.sleep(1)
+        print(f"\r{message}... {n-1}", end="")
+    print()
 def admin(choice):
     if choice == "report":
         logging.debug("Show ingredients and money of machine.")
@@ -73,28 +77,29 @@ def make_coffee(choice):
         coffe_cant_be_ready = False
         return coffe_cant_be_ready
     def coin_handler(coffee_name):
-        quarters = int(input("How many quartes are you going to give ? "))
-        dimes = int(input("How many dimes are you going to give ? "))
-        nickels = int(input("How many nickels are you going to give ? "))
-        pennies = int(input("How many pennies are you going to give ? "))
+        while True:
+            try:
+                quarters = abs(int(input("How many quartes are you going to give ? ")))
+                dimes = abs(int(input("How many dimes are you going to give ? ")))
+                nickels = abs(int(input("How many nickels are you going to give ? ")))
+                pennies = abs(int(input("How many pennies are you going to give ? ")))
+                break
+            except ValueError:
+                print("Invalid input.The count of coins must be positive and be whole number. Try again.")
         total_coin = (quarters * 0.25) + (dimes * 0.10) + (nickels * 0.05) + (pennies * 0.01)
         coffee_price = MENU[coffee_name]["cost"]
         logging.debug(f"Coffee Cost: {coffee_price}, User's money: {coffee_price}")
         if total_coin < coffee_price:
             logging.debug("Not enough money")
             print(f"Sorry price for ${coffee_name} is {coffee_price}.You gave ${round(total_coin,3)}.\nMoney will be refunded.")
-            for n in range(5, 0, -1):
-                time.sleep(1)
-                print(f"\rRefunding money... {n-1}", end="")
+            countdown("Refunding money",5)
             print("\nMoney refunded.")
             no_available_coffee = True
             prep_coffee = False
         elif total_coin > coffee_price:
             print(f"Your change is ${round((total_coin - coffee_price),3)}. Change will be refunded.")
             resources["money"] += coffee_price
-            for n in range(5, 0, -1):
-                time.sleep(1)
-                print(f"\rRefunding money... {n-1}", end="")
+            countdown("Refunding money",5)
             print("\nMoney refunded.")
             no_available_coffee = False
             prep_coffee = True
@@ -113,10 +118,8 @@ def make_coffee(choice):
             usage = machine_values[i] - coffee_values[i]
             logging.debug("Update ingredients")
             resources[keys[i]] = usage
-        for n in range(5, 0, -1):
-            time.sleep(1)
-            print(f"\rPreparing coffee... {n-1}", end="")
-        print("\nYour coffee is ready!")
+        countdown("Preparing coffee",5)
+        print("\nYour coffee is ready!☕")
         print("-" * 50)
         coffee_readiness = True
         prep_coffee = False
@@ -132,7 +135,7 @@ def make_coffee(choice):
             prepare_the_coffee, coffee_ready= prepare_coffee(choice)
 
 while True:
-    print(f"""Coffee machine!
+    print(f"""☕Coffee machine!☕
     {"-" * 50}
     How To Use :
         1.Select the coffee type you want.
