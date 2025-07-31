@@ -1,3 +1,6 @@
+# Coffee Machine Program
+# This program simulates a coffee machine that allows users to select coffee types,
+# insert coins, and receive their coffee while managing resources and handling admin tasks.
 import logging
 import time
 
