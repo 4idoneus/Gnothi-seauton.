@@ -1,3 +1,8 @@
+# Quiz Game Project with OOP Principles
+# This project is a simple quiz game that uses object-oriented programming principles.
+# It includes a Question class to represent each question, a QuizBrain class to manage the quiz logic,
+# and a main script to run the quiz game.
+
 from day17_question_model import Question
 from day17_quiz_brain import QuizBrain
 from day17_data import question_data
