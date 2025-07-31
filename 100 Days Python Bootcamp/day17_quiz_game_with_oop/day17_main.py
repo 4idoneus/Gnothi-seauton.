@@ -6,8 +6,8 @@ question_bank = []
 player_score = 0
 for question in question_data:
     # question_bank.append(Question(question_data[i]["text"],question_data[i]["answer"])) #This is the doing the same thing but in a more compact way. I wrote this.
-    question_text = question["text"]
-    question_answer = question["answer"]
+    question_text = question["question"]
+    question_answer = question["correct_answer"]
     new_question = Question(question_text,question_answer)
     question_bank.append(new_question)
 
