@@ -1,51 +1,41 @@
+# Hirst Painting Project
+# This code creates a digital version of a Hirst-style dot painting using the turtle graphics library
+# it extracts colors from an image and uses them to draw a grid of colored dots.
 from turtle import Turtle, Screen
-def move_square(turtle,angle):
-    turtle.setheading(angle)
-    for i in range(4):
-        turtle.forward(100)
-        turtle.left(90)
-    for i in range(4):
-        turtle.forward(100)
-        turtle.right(90)
-    for i in range(4):
-        turtle.left(180)
-        turtle.forward(100)
-        turtle.left(90)
-    for i in range(4):
-        turtle.right(180)
-        turtle.forward(100)
-        turtle.right(90)
-    for i in range(4):
-        turtle.left(45)
-        turtle.forward(141.42135623730950488016887242097)
-        turtle.right(135)
-        turtle.forward(100)
-        turtle.right(45)
-        turtle.forward(141.42135623730950488016887242097)
-        turtle.right(135)
-        turtle.forward(100)
+import random as rand
+import colorgram
+screen = Screen()
+screen.colormode(255)
+colours = []
+def get_colour(a_list):
+    painting_colours = colorgram.extract("hirst_painting_colours.jpg",25)
+    for z in range(0,24):
+        a_list.append(painting_colours[z].rgb)
+    return colours
+
+colours = get_colour(colours)
+
+def row(a):
+    for _ in range(a):
+        ai.pendown()
+        colour = rand.choice(colours)
+        ai.dot(20,colour)
+        ai.penup()
+        ai.forward(50)
+def get_and_set_positon():
+    position = ai.position()
+    ai.sety((position[1] + 50))
+    ai.setx(-300)
 ai = Turtle()
-lethe = Turtle()
-philip = Turtle()
-ui = Turtle()
+ai.penup()
+ai.speed(0)
+ai.setposition((-300,-300))
+circle_and_row_number = 10
 
-ai.color("dark green")
-lethe.color("dark red")
-philip.color("midnight blue")
-ui.color("indigo")
-
-ai.speed(10)
-lethe.speed(10)
-philip.speed(10)
-ui.speed(10)
-for _ in range(1,86,4):
-    move_square(ai,_)
-    move_square(lethe,_ + 1)
-    move_square(philip,_ + 2)
-    move_square(ui,_ + 3)
-
-
+for i in range(circle_and_row_number):
+    row(circle_and_row_number)
+    get_and_set_positon()
+ai.hideturtle()
 
 #This code snippet should happen on the bottom of the code
-screen = Screen()
 screen.exitonclick()
