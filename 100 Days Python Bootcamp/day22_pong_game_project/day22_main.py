@@ -1,3 +1,7 @@
+# Pong Game
+# This is a simple implementation of the classic Pong game using Python's turtle graphics.
+# The game features two paddles, a ball, and a scoreboard.
+# Players can control the paddles using keyboard inputs to hit the ball back and forth.
 import time
 from turtle import Turtle, Screen
 from day22_paddle import Paddle
