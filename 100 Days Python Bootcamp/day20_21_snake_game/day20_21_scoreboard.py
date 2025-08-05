@@ -5,6 +5,19 @@ FONT = ("Pixelify Sans",20,"normal")
 WARNING_FONT = ("Pixelify Sans",40,"normal")
 ENDING_POSITIONS = [(0, 150), (0, 50), (0, -50), (0, -150),(0,-250)]
 
+def restart_game(screen):
+    answer = screen.textinput("Restart", "Do you want to play again?\nType y/yes or n/no").lower()
+    if answer and answer in ("y", "yes"):
+        # If player wants to continue clears the screen.
+        screen.clear()
+        return True
+    # If player wants to exit.
+    elif answer in ("n", "no"):
+        return False
+    #If player's answer is not supported
+    else:
+        return False
+
 class Scoreboard(Turtle):
     def __init__(self):
         super().__init__()

@@ -47,3 +47,13 @@ class Fish(Animal):
                                             #              break
                                             # return x, y
 ```
+#### How to slice List & Tuples
+
+##### Slicing List
+```
+piano_keys =[|a|b|c|d|e|f|g|]
+             0 1 2 3 4 5 6 7
+```
+To get the c,d,e we can show the selection of list like this `piano_keys[2:5]`. 
+As you can see the slicing is when you think of a list the very start is 0 then every seperator is the end of the list's item.
+If we wanted to get only a and b we should write it like this `piano_keys[0:2]`

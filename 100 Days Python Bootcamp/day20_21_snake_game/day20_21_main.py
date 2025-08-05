@@ -1,6 +1,6 @@
 from turtle import Screen
 from day20_21_food import Food
-from day20_21_scoreboard import Scoreboard
+import day20_21_scoreboard as s
 import time
 from day20_21_snake import Snake
 
@@ -17,7 +17,7 @@ while play_game:
     screen.bgcolor("black")
     snake = Snake()
     food = Food()
-    scoreboard = Scoreboard()
+    scoreboard = s.Scoreboard()
 
 
 
@@ -57,13 +57,6 @@ while play_game:
                 scoreboard.game_over()
 
     #Restart the game mechanic.
-    answer = screen.textinput("Restart","Do you want to play again?\nType y/yes or n/no").lower()
-    if answer and answer in ("y", "yes"):
-        # If player wants to continue clears the screen.
-        screen.clear()
-        continue
-    # If player wants to exit.
-    elif not answer or answer in ("n", "no"):
-        play_game = False
+    play_game = s.restart_game(screen)
 
 screen.exitonclick()
