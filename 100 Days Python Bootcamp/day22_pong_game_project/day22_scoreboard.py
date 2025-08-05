@@ -8,7 +8,7 @@ FONT = ("Pixelify Sans",20,"normal")
 W_FONT = ("Pixelify Sans",50,"normal")
 GO_FONT = ("Pixelify Sans",30,"normal")
 GO_ENDING_POSITIONS = [(0, 200), (0, 100), (0, -100), (0, -200)]
-GG_ENDING_POSITIONS = [(0, 250),(0, 150), (0, 50), (0, -50), (0, -150),(0, -250)]
+GG_ENDING_POSITIONS = [(0, 250),(0, 150), (0, 60), (0, -60), (0, -150),(0, -250)]
 
 def draw_game_border(turtle, width, height):
     turtle.hideturtle()
@@ -108,9 +108,9 @@ class Scoreboard(Turtle):
         self.color("white")
         self.goto(0,0)
         if self.player1_score > self.player2_score:
-            self.write(f"Winner is Player 1 with {self.player1_score}.",align="center",font=W_FONT)
+            self.write(f"Winner is Player 1 with {self.player1_score} points.",align="center",font=W_FONT)
         elif self.player1_score < self.player2_score:
-            self.write(f"Winner is Player 2 with {self.player2_score}.",align="center",font=W_FONT)
+            self.write(f"Winner is Player 2 with {self.player2_score} points.",align="center",font=W_FONT)
         else:
             self.write(f"It's a DRAW. When is the rematch?",align="center",font=W_FONT)
         self.color("red")
