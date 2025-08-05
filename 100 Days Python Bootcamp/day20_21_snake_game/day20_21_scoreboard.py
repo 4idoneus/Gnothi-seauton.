@@ -1,4 +1,3 @@
-from idlelib.pyshell import restart_line
 from turtle import Turtle, Screen
 ALIGNMENT = "center"
 FONT = ("Pixelify Sans",20,"normal")
