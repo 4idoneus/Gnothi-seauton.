@@ -6,7 +6,7 @@ import time
 from turtle import Turtle, Screen
 from day22_paddle import Paddle
 from day22_ball import Ball
-import day22_scoreboard as s
+import day22_screen_details_and_scoreboard as s
 import day22_paddle_movement_system as movement
 PADDLE1_STARTING_POSITIONS = [(580,40), (580,20), (580, 0), (580,-20), (580,-40)]
 PADDLE2_STARTING_POSITIONS = [(-580,40), (-580,20), (-580, 0), (-580,-20), (-580,-40)]
